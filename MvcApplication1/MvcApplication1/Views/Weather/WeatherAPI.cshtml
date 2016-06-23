@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "WeatherAPI";
+}
+
+
+<div id="containerElements" class="float-left" style="width:30%;display:block;margin-bottom:0px;">
+    <h2 style="float:left;margin-top:1px;font-size:24px;color:#0072c6;border-bottom-color:currentColor; border-bottom-width: 2px; border-bottom-style: solid;line-height:45px;font-family:'Oswald', sans-serif;">Weather for city</h2>
+</div>
+
+<div id="divWeather" style="width:30%;display:block;margin-top:64px;">
+    <h3 id="place" style="font-size:20px;"></h3>
+    <h2 id="temp" style="margin-bottom:-14px;"></h2>
+
+    <p id="desc" style="font-size:14px;margin-top:28px;margin-left:1px;"></p>
+
+    <table id="initialWeather" border="0" style="word-spacing:3%;border-spacing:5px;">
+        <tbody>
+
+            <tr>
+                <td>Wind</td>
+                <td id="wind">
+                   
+                </td>
+            </tr>
+
+            <tr><td>Cloudiness</td><td id="cloudiness"></td></tr>
+
+            <tr><td>Pressure<br></td><td id="pressure"></td></tr>
+
+
+            <tr><td>Humidity</td><td id="humidity"></td></tr>
+
+            <tr><td>Sunrise</td><td id="sunrise"></td></tr>
+            <tr><td>Sunset</td><td id="sunset"></td></tr>
+            <tr><td>Geo coords</td><td id="coord"></td></tr>
+            <tr style="border:hidden;"><td style="border:hidden;"></td><td><div class="weatherReport" @*onclick="javaScript: redirectToChat();"*@>Click here to Chat!!!<br /></div></td></tr>
+        </tbody>
+    </table>
+
+</div>
+<div>
+
+</div>
+<ul id="mainNav" class="nav nav-tabs" style="width: 60%; padding-bottom: 9px; padding-left: 0px; font-family: inherit; font-size: 15px; margin-top: -390px; border-bottom-color: #f9f9f9; border-bottom-width: 2px; border-bottom-style: solid;float: right; list-style-type: none;margin-right:95px;">
+    <li id="forecast-main_a" class="active" style="cursor:pointer;" onclick="javascript: activeTab(this.id); showReport(); showDailyListVertical(); showHideDivs('chart'); fnMake();"><span>Main</span></li>
+    <li id="daily_chart_a" style="cursor:pointer;" onclick="activeTab(this.id); showDailyChart(); showHideDivs('chart_daily'); fnMake();"><span>Daily</span></li>
+    <li id="hourly_list_a" style="cursor:pointer;" onclick="activeTab(this.id); showForcastHourlyListLong(); showHideDivs('hourly_long_list'); fnMake();"><span>Hourly</span></li>
+    <li id="forecast-chart_a" style="cursor:pointer;" onclick="activeTab(this.id); showHideDivs('forecast-chart'); showForcastChartVal('temp'); fnMake(); activeSubTab('temp_a');"><span>Chart</span></li>
+</ul>
+
+<div id="chart" style="width: 672px; height: 260px; clear: both; margin-top: -305px; float: right;">
+</div>
+<div id="chart_daily" style="width: 672px; height: 330px; margin-top: -330px; float: right;margin-right:1.5%;">
+</div>
+
+<div id="forecast_small" style="float:right;clear:both;width:69%;margin-top:-40px;">
+</div>
+
+<h2 id="nxtDays" style='margin-top: 35px; margin-right: 554px; float: right;font-family: inherit;
+  font-weight: 600;
+  line-height: 1.1;
+  color: inherit;'>
+    Next Days
+</h2>
+<div id="daily_list" style="width:70%;float:right;margin-right:-9px;">
+</div>
+
+<div id="hourly_long_list" style="float:right;width:70%;margin-top:-37%;">
+</div>
+<div id="forecast-chart" style="float:right;width:70%;display:none;">
+    <ul id="subNavChart" class="nav nav-tabs" style="padding-bottom: 9px; padding-left: 0px; font-family: inherit; font-size: 15px; margin-top: -340px; border-bottom-color: #f9f9f9; border-bottom-width: 2px; border-bottom-style: solid;float: right; list-style-type: none;margin-right:48.5%;display:inline-block;">
+        <li id="temp_a" class="subActive" style="cursor:pointer;" onclick="javascript: showForcastChartVal('temp'); activeSubTab(this.id);" title="Temperature">Temperature</li>
+        <li id="wind_a" class="" style="cursor:pointer;" onclick="javascript: showForcastChartVal('wind_ms'); activeSubTab(this.id);" title="Wind">Wind</li>
+        <li id="pressure_a" class="" style="cursor:pointer;" onclick="javascript: showForcastChartVal('pressure'); activeSubTab(this.id);" title="Pressure">Pressure</li>
+        <li id="precipitation_a" class="" style="cursor:pointer;" onclick="javascript: showForcastChartVal('precipitation'); activeSubTab(this.id);" title="Precipitation">Precipitation</li>
+    </ul>
+    
+    <div id="chart-forecast" style="margin: -300px auto 0px; height: 300px;"></div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/Scripts/jquery-ui-1.8.24.min.js")
+    
+
+    <script type="text/javascript">
+
+        //$(function () {
+        //    var city = $('#cityName').attr("value");
+        //    debugger
+        //    fnGetCurrentWeather(city);
+        //});
+
+
+
+    </script>
+}
+

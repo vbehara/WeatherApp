@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Weather";
+}
+
+<input type="hidden" id="coordinates" />
+<div id="searchCityWeather" style="float:right;margin-right:-2.3%;">
+    <input type="text" id="cityName" style="width:67%;margin-bottom:10px;margin-left:-40px;height:22px;margin-top:15px;" placeholder="Your City Name" />
+    <input type="button" id="searchWeather" value="Search" style="height:34px;" onclick="javascript: fnGetCurrentWeather();" />
+</div>
+
+
+<h2 id="nxtHrs" style="color: inherit; line-height: 1.1; font-family: inherit; font-weight: 600; margin-top: 115px; margin-right: 36%; float: right;">Next Hours</h2>
+@Html.Partial("../Weather/WeatherAPI")
+<div id="popDiv" class="ontop">
+</div>
+<div id="popup">
+    <img id="imgLoad" src="~/Images/ajax_loader.gif" />
+</div>
+<input type="hidden" id="brows" />
+
+@section scripts{
+    @Scripts.Render("~/Scripts/jquery-ui-1.8.24.min.js")
+    @Scripts.Render("~/Scripts/highcharts.js")
+    @Scripts.Render("~/Scripts/highcharts-more.js")
+    @Scripts.Render("~/Scripts/weather_scripts.js")
+    @Scripts.Render("~/Scripts/chat_scripts.js")
+
+    <script type="text/javascript">
+
+
+        $(function () {
+            
+            // nxtHrs --- margin-top: 115px; margin-right: 313px;
+           
+            //var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+            //// Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
+            //var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
+            //var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+            //// At least Safari 3+: "[object HTMLElementConstructor]"
+            //var isChrome = !!window.chrome && !isOpera;              // Chrome 1+
+            //var isIE = false || !!document.documentMode;   // At least IE6
+
+            //if (isIE == false) {
+            //    $("#brows").val(isIE);
+            //    $("#nxtHrs").attr("style", "color: inherit; line-height: 1.1; font-family: inherit; font-weight: 600; margin-top: 115px; margin-right: 36%; float: right;display:block;")
+            //    $("#searchCityWeather").attr("style", "float:right;margin-right:-2%;");
+            //}
+            //else {
+
+            //    $("#nxtHrs").attr("style", "color: inherit; line-height: 1.1; font-family: inherit; font-weight: 600; margin-top: 115px; margin-right: 33%; float: right;display:block;")
+            //    $("#searchCityWeather").attr("style", "float:right;margin-right:-3.2%;");
+            //}
+
+            var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+            // Opera 8.0+ (UA detection to detect Blink/v8-powered Opera)
+            var isFirefox = typeof InstallTrigger !== 'undefined';   // Firefox 1.0+
+            var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+            // At least Safari 3+: "[object HTMLElementConstructor]"
+            var isChrome = !!window.chrome && !isOpera;              // Chrome 1+
+            var isIE = false || !!document.documentMode;   // At least IE6
+
+            if (isIE == false) {
+                $("#brows").val(isIE);
+                $("#nxtHrs").attr("style", "color: inherit; line-height: 1.1; font-family: inherit; font-weight: 600; margin-top: 115px; margin-right: 36%; float: right;display:block;")
+                $("#searchCityWeather").attr("style", "float:right;margin-right:-2.3%;");
+            }
+            else {
+
+                $("#nxtHrs").attr("style", "color: inherit; line-height: 1.1; font-family: inherit; font-weight: 600; margin-top: 115px; margin-right: 33%; float: right;display:block;")
+                $("#searchCityWeather").attr("style", "float:right;margin-right:-3.7%;");
+            }
+
+            getLocation();
+
+        });
+
+
+    </script>
+}

@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "ChatOnly";
+}
+
+<h2 style="font-size:24px;font-weight: 600;line-height: 1.1;color: inherit;">Chat Room</h2>
+<div id="container" style="display:block;overflow-y:auto;">
+    
+    <input type="hidden" id="nickname" />
+    <div id="chatlog"></div>
+    <div id="onlineusers">
+        <b>Online Users</b>
+    </div>
+    <div id="chatarea">
+        <div class="messagelog">
+            <textarea spellcheck="true" id="message" class="messagebox" style="width:388px;"></textarea>
+        </div>
+        <div class="actionpane">
+            <input type="button" id="btnsend" value="Send" />
+        </div>
+        <div class="actionpane">
+            <select id="users" style="margin-top:5px; line-height: 70%; height:35px;">
+                <option value="All">All</option>
+            </select>
+        </div>
+    </div>
+    @*<div id="dialog" title="Enter your name to start a chat.">
+            <input type="text" id="nick" />
+        </div>*@
+</div>
+
+@*<div id="dialog" title="Enter your name to start a chat.">
+    <input type="text" id="nick" maxlength="8" />
+</div>*@
+
+<div id="popDiv" class="ontop">
+</div>
+<table id="popup">
+    <tr>
+        <td style="background-color:#0072c6;color:#ffffff;padding-left:9px;height:40px;">
+            Enter name to Chat.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="nick" maxlength="8" style="width:156px;margin-left:9px;display:inline-block;"/>
+            <input type="button" id="btnOk" value="Ok" style="height: 30px; margin-bottom: 9px;"/>
+         
+        </td>
+    </tr>
+</table>
+@section scripts{
+    @Scripts.Render("~/Scripts/jquery-ui-1.8.24.min.js")
+    @Scripts.Render("~/Scripts/jquery.signalR-2.2.0.min.js")
+    @Scripts.Render("~/Scripts/chat_scripts.js")
+
+    <script type="text/javascript">
+
+
+        $(function () {
+            //debugger
+
+            //getLocation();
+
+            showModalUserNickName();
+        });
+
+
+    </script>
+}

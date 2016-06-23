@@ -1,0 +1,427 @@
+﻿#container {
+    width: 400px;
+    margin-left: 0px;
+    margin-right: auto;
+    margin-top: 8px;
+    float: left;
+}
+
+table {
+    max-width: 100%;
+    background-color: transparent;
+}
+
+th {
+    text-align: left;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-left: hidden;
+    border-right: hidden;
+}
+
+.table {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+    .table > thead > tr > th,
+    .table > tbody > tr > th,
+    .table > tfoot > tr > th,
+    .table > thead > tr > td,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+    }
+
+    .table > thead > tr > th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #ddd;
+    }
+
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 90%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.label-warning {
+    background-color: #f0ad4e;
+}
+
+.label-default {
+    background-color: #999;
+}
+
+.label-primary {
+    background-color: #428bca;
+}
+
+#chatlog {
+    width: 250px;
+    background-color: rgba(254, 254, 254, 1);
+    float: left;
+    font-size: 16px;
+    border-color: ActiveBorder;
+}
+
+#onlineusers {
+    float: right;
+    width: 100px;
+    background-color: #D4D4D4;
+}
+
+#chatarea {
+    clear: both;
+    width: 200px;
+}
+
+    #chatarea .messagelog {
+        float: left;
+        height: 90%;
+        top: 10%;
+        position: relative;
+    }
+
+        #chatarea .messagelog .messagebox {
+            width: 400px;
+            height: 80%;
+        }
+
+    #chatarea .actionpane {
+        position: relative;
+        float: left;
+    }
+
+.smileys {
+    width: 18px;
+    height: 16px;
+}
+
+select option {
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+.weatherReport {
+    background-color: #d3dce0;
+    border: 1px solid #787878;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+    padding-bottom: 8px;
+    padding-left: 13px;
+    width: 150px;
+    margin-top: 8px;
+}
+
+
+
+table#nextDays tbody tr td img {
+    vertical-align: middle;
+}
+
+table#initialWeather tbody tr td {
+    font-size: 14px;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+table#initialWeather tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+table {
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+    display: table;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+h2 img {
+    margin-top: -5.5px;
+    margin-left: -7px;
+}
+
+
+input[placeholder], [placeholder], *[placeholder] {
+    color: #808080;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    text-align: justify;
+    padding-bottom: 5px;
+}
+
+
+div.small_val, div.small_val_grey {
+    display: block;
+    clear: left;
+    font-size: 11.5px;
+    /*padding: 0pt 3pt;*/
+}
+
+/*.ontop {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    color: #aaaaaa;
+    opacity: .6;
+    filter: alpha(opacity = 70);
+}*/
+
+#popup {
+    z-index: 999;
+    /*width: 241px;
+    height: 120px;*/
+    position: absolute;
+    font-family: 'Segoe UI', Verdana, Helvetica, Sans-Serif;
+    color: #ffffff;
+    
+    /*background-color: rgb(0, 0, 0);
+    opacity: 0.6;
+    filter: alpha(opacity = 60);*/
+    /* To align popup window at the center of screen*/
+    top: 50%;
+    
+    left: 57%;
+    margin-top: -100px;
+    margin-left: -150px;
+}
+
+.ontop {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: block;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    color: #aaaaaa;
+    opacity: 0.6;
+    filter: alpha(opacity = 70);
+}
+
+.active {
+    border-bottom-color: orange;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+li {
+    padding: 9px;
+    display: inline;
+}
+    
+.nav-tabs {
+    margin-bottom: 15px;
+}
+
+    .nav-tabs > li > a {
+        border-bottom: 1px solid #dedede;
+        border-radius: 0;
+        background: #fff;
+        color: #999;
+        -webkit-transition: color 200ms;
+        transition: color 200ms;
+    }
+
+        .nav-tabs > li > a:hover, .nav > li > a:focus {
+            text-decoration: none;
+            background-color: #fff;
+            border-color: #fff #fff #dedede;
+            color: #515151;
+        }
+
+    .nav-tabs > li.active > a,
+    .nav-tabs > li.active > a:hover,
+    .nav-tabs > li.active > a:focus {
+        color: #515151;
+        cursor: default;
+        background-color: #fff;
+        border: 1px solid transparent;
+    }
+
+.body-green .nav-tabs > li.active > a,
+.body-green .nav-tabs > li.active > a:hover,
+.body-green .nav-tabs > li.active > a:focus {
+    border-bottom-color: #94BA65;
+}
+
+.body-blue .nav-tabs > li.active > a,
+.body-blue .nav-tabs > li.active > a:hover,
+.body-blue .nav-tabs > li.active > a:focus {
+    border-bottom-color: #2790B0;
+}
+
+.body-orange .nav-tabs > li.active > a,
+.body-orange .nav-tabs > li.active > a:hover,
+.body-orange .nav-tabs > li.active > a:focus {
+    border-bottom-color: #D26C22;
+}
+
+.body-red .nav-tabs > li.active > a,
+.body-red .nav-tabs > li.active > a:hover,
+.body-red .nav-tabs > li.active > a:focus {
+    border-bottom-color: #E35E54;
+}
+
+.nav-tabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 0;
+}
+
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus {
+    border: 1px solid transparent;
+}
+
+/* 2. Nav pills */
+
+.nav-pills {
+    margin-bottom: 15px;
+}
+
+    .nav-pills > li > a {
+        color: #515151;
+        -webkit-transition: background-color 200ms;
+        transition: background-color 200ms;
+    }
+
+    .nav-pills > li > a {
+        background-color: #f5f5f5;
+    }
+
+.body-green .nav-pills > li.active > a,
+.body-green .nav-pills > li.active > a:hover,
+.body-green .nav-pills > li.active > a:focus {
+    background-color: #94BA65;
+}
+
+.body-blue .nav-pills > li.active > a,
+.body-blue .nav-pills > li.active > a:hover,
+.body-blue .nav-pills > li.active > a:focus {
+    background-color: #2790B0;
+}
+
+.body-orange .nav-pills > li.active > a,
+.body-orange .nav-pills > li.active > a:hover,
+.body-orange .nav-pills > li.active > a:focus {
+    background-color: #D26C22;
+}
+
+.body-red .nav-pills > li.active > a,
+.body-red .nav-pills > li.active > a:hover,
+.body-red .nav-pills > li.active > a:focus {
+    background-color: #E35E54;
+}
+
+.nav.nav-pills > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #f0f0f0;
+}
+
+.nav-pills-green > li.active > a,
+.nav-pills-green > li.active > a:hover,
+.nav-pills-green > li.active > a:focus {
+    background-color: #94BA65 !important;
+}
+
+.nav-pills-blue > li.active > a,
+.nav-pills-blue > li.active > a:hover,
+.nav-pills-blue > li.active > a:focus {
+    background-color: #2790B0 !important;
+}
+
+.nav-pills-red > li.active > a,
+.nav-pills-red > li.active > a:hover,
+.nav-pills-red > li.active > a:focus {
+    background-color: #E35E54 !important;
+}
+
+.nav-pills-orange > li.active > a,
+.nav-pills-orange > li.active > a:hover,
+.nav-pills-orange > li.active > a:focus {
+    background-color: #D26C22 !important;
+}
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+    .well blockquote {
+        border-color: #ddd;
+        border-color: rgba(0, 0, 0, .15);
+    }
+
+.well-lg {
+    padding: 24px;
+    border-radius: 6px;
+}
+
+.well-sm {
+    padding: 9px;
+    border-radius: 3px;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #999;
+    border-radius: 10px;
+}
+
+    .badge:empty {
+        display: none;
+    }
+
+.subActive {
+    background-color: #ddd;
+}
+
